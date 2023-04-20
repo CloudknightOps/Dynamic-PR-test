@@ -10,7 +10,7 @@ spec:
         # The GitHub organization or user.
         owner: CloudKnightOps
         # The Github repository
-        repo: argocd-course-webapp
+        repo: Dynamic-PR-test
         # Labels is used to filter the PRs that you want to target. (optional)
         labels:
         - preview
@@ -21,7 +21,7 @@ spec:
       namespace: argocd
     spec:
       source:
-        repoURL: 'https://github.com/mabusaa/argocd-course-webapp.git'
+        repoURL: 'https://github.com/CloudknightOps/Dynamic-PR-test.git'
         targetRevision: '{{head_sha}}'
         path: helm/webapp
       project: "default"
