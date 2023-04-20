@@ -21,9 +21,12 @@ spec:
       namespace: argocd
     spec:
       source:
-        repoURL: 'https://github.com/CloudknightOps/Dynamic-PR-test.git'
-        targetRevision: '{{head_sha}}'
-        path: helm/webapp
+        helm:
+          valueFiles:
+            - 'values.yaml'
+        path: webapp
+        repoURL: https://github.com/CloudknightOps/Dynamic-PR-test.git
+        targetRevision: '{{head_sha}}
       project: "default"
       destination:
         server: https://kubernetes.default.svc
