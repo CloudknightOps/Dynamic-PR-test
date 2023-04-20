@@ -55,8 +55,8 @@ jobs:
   add_labels:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
-      contents: write
+      id-token: write-all
+      contents: write-all
     needs: update-image-tag-in-helm
     steps:
       - uses: actions/checkout@v2
