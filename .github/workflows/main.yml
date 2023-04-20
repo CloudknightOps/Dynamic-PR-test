@@ -54,9 +54,7 @@ jobs:
           git push
   add_labels:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write-all
-      contents: write-all
+    permissions: write-all
     needs: update-image-tag-in-helm
     steps:
       - uses: actions/checkout@v2
