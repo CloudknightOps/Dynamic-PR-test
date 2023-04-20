@@ -12,6 +12,9 @@ jobs:
       - run: echo "building and testing the app ..."
   docker-build-push:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
     needs: build-test
     steps:
       -
@@ -54,6 +57,9 @@ jobs:
           git push
   add_labels:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
     needs: update-image-tag-in-helm
     steps:
       - uses: actions/checkout@v2
