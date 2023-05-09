@@ -8,7 +8,7 @@ image:
   repository: CloudknightOps/Dynamic-PR-test
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 4ce79c1d7f3566ff367346e04197c8b94feb40d7
+  tag: 816b9d8e28be3b5ea8cfd0340b60c75fd32405b6
 
 imagePullSecrets: []
 nameOverride: ""
