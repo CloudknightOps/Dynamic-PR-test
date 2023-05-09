@@ -1,4 +1,3 @@
-A Pull-request test file 
-A new line to the test file to check it out 
-Testing out our Pull request generator application 
-Testing again and and A
+Now lets test out the file changes and see how it goes 
+We will explore the applicationset to deploy multiple folders 
+
