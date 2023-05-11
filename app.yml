@@ -1,0 +1,45 @@
+    apiVersion: argoproj.io/v1alpha1
+    kind: ApplicationSet
+    metadata:
+      name: webapp-review
+      namespace: argocd
+    spec:
+      generators:
+      - pullRequest:
+          github:
+            # The GitHub organization or user.
+            owner: mabusaa
+            # The Github repository
+            repo: argocd-course-webapp
+            # Labels is used to filter the PRs that you want to target. (optional)
+            labels:
+            - preview
+          requeueAfterSeconds: 90
+      template:
+        metadata:
+          name: 'webapp-{{branch}}-{{number}}'
+          namespace: argocd
+        spec:
+          source: # multi source goes here
+     
+           - repoURL: 'https://github.com/CloudknightOps/Dynamic-PR-test.git'
+             targetRevision: '{{head_sha}}'
+             path: helm/webapp
+             
+           - repoURL: 'https://github.com/CloudknightOps/Pull-request-test.git'
+             targetRevision: '{{head_sha}}'
+             path: helm/webapp
+
+           - repoURL: 'https://github.com/CloudknightOps/Pull-req-test.git'
+             targetRevision: '{{head_sha}}'
+             path: helm/webapp
+              
+          project: "default"
+          destination:
+            server: https://kubernetes.default.svc
+            namespace: webapp-{{branch}}-{{number}}
+          syncPolicy:
+             syncOptions:
+              - CreateNamespace=true
+
+
