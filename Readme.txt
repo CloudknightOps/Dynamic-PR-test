@@ -1,2 +1,2 @@
-We have corrected the errors in our k8s files and alsop corrected the errors in the 
-Naming convention 
+We are running tests for the PR 
+This time we are curbing the error in the namespaces 
