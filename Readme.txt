@@ -1,3 +1,2 @@
-Now lets test out the file changes and see how it goes 
-We will explore the applicationset to deploy multiple folders 
-
+We have corrected the errors in our k8s files and alsop corrected the errors in the 
+Naming convention 
