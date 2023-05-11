@@ -1,3 +1,2 @@
-Now lets test out the file changes and see how it goes 
-We will explore the applicationset to deploy multiple folders 
-
+We are running tests for the PR 
+This time we are curbing the error in the namespaces 
