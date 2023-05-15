@@ -1,2 +1,2 @@
-We are running tests for the PR 
-This time we are curbing the error in the namespaces 
+Preparing for the  Live demo test for the 
+Matrix generator to test out the Argocd PR on demand environments. 
